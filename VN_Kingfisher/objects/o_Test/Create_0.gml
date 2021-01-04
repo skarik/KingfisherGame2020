@@ -27,3 +27,5 @@ if (file_exists(build_filename))
 }*/
 
 SequenceLoad("seq/test_v2.txt");
+
+m_ready = true;

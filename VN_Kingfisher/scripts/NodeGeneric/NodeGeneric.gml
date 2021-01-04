@@ -2,7 +2,7 @@ function ANodeGeneric() : INode() constructor
 {
 	state = 0;
 	
-	static Run = function()
+	static OnFrame = function()
 	{
 		if (state == 0)
 		{

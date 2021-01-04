@@ -14,10 +14,17 @@ function INode() constructor
 	// The GUID of the given node.
 	guid = 0x00000000;
 	// If nonzero, refers to the node to jump to after this one.
+	// If zero, the node will continue onto the next node.
+	// If 0xFFFFFFFF, the execution will jump past the end and stop.
 	next = 0x00000000;
 	
-	/// @function virtual Run()
-	static Run = function()
+	/// @function virtual OnLoad()
+	static OnLoad = function()
+	{
+		// Nothing.
+	};
+	/// @function virtual OnFrame()
+	static OnFrame = function()
 	{
 		// Nothing.
 	};
