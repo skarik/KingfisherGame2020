@@ -1,0 +1,38 @@
+//!/osf/seq/2
+MainTask
+{
+	goto FDAA84C2
+	guid B7882E66
+	__editor_position -363.141174	116.076157	0.000000
+}
+Generic
+{
+	guid FDAA84C2
+	__editor_position -113.289032	119.582489	10.000000
+}
+goto F82F94C6
+#F82F94C6
+Generic
+{
+	guid F82F94C6
+	__editor_position 108.256104	124.330612	17.739136
+}
+Generic
+{
+	guid 706FB885
+	__editor_position 307.073181	124.043625	27.739136
+}
+goto __END
+Sidetask
+{
+	goto 2021A835
+	guid C8F9D41D
+	__editor_position -354.743286	-68.517242	20.000000
+}
+Generic
+{
+	guid 2021A835
+	__editor_position -123.509277	-66.618622	30.000000
+}
+goto F82F94C6
+#__END
