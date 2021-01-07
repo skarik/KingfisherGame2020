@@ -363,6 +363,7 @@ function ASequenceTaskState(inSequencer) constructor
 {
 	sequencer = inSequencer;
 	currentNodeIndex = 0;
+	currentNodeGuid = 0x00000000;
 	bRunning = true;
 	
 	static Update = function()
@@ -398,6 +399,17 @@ function ASequenceTaskState(inSequencer) constructor
 						}
 					}
 				}
+			}
+			
+			// Grab the current node's GUID
+			var now_node = sequencer.sqm_data_nodes[currentNodeIndex];
+			if (currentNodeIndex < node_count)
+			{
+				currentNodeGuid = now_node.guid; 
+			}
+			else
+			{
+				currentNodeGuid = 0xFFFFFFFF;
 			}
 			
 			// End node logic
