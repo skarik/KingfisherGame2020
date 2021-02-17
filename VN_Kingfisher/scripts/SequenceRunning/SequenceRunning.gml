@@ -365,6 +365,7 @@ function ASequenceTaskState(inSequencer) constructor
 	currentNodeIndex = 0;
 	currentNodeGuid = 0x00000000;
 	bRunning = true;
+	index = 0;
 	
 	static Update = function()
 	{
@@ -372,6 +373,7 @@ function ASequenceTaskState(inSequencer) constructor
 		if (currentNodeIndex < node_count)
 		{
 			var node = sequencer.sqm_data_nodes[currentNodeIndex];
+			node.taskIndex = index;
 			node.OnFrame();
 			
 			// If the node is done, we need to go forward
@@ -454,6 +456,7 @@ function SequenceUpdate()
 	for (var taskIndex = 0; taskIndex < array_length(sqm_tasks); ++taskIndex)
 	{
 		var task = sqm_tasks[taskIndex];
+		task.index = taskIndex;
 		task.Update();
 	}
 	

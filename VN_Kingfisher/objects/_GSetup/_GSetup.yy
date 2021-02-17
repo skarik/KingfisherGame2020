@@ -18,17 +18,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"o_TestSequence","path":"objects/o_TestSequence/o_TestSequence.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"o_TestSequence","path":"objects/o_TestSequence/o_TestSequence.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"_GSetup","path":"objects/_GSetup/_GSetup.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Engine Tests",
-    "path": "folders/Objects/Engine Tests.yy",
+    "name": "Core Backend",
+    "path": "folders/Objects/Core Backend.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_TestSequence",
+  "name": "_GSetup",
   "tags": [],
   "resourceType": "GMObject",
 }

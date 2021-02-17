@@ -4,6 +4,7 @@ function SequenceBackendInit()
 		["maintask", ATaskNodeStart],
 		["sidetask", ITaskNode],
 		["generic", ANodeGeneric],
+		["vn_lines", ANodeLines],
 	];
 }
 
@@ -17,6 +18,10 @@ function INode() constructor
 	// If zero, the node will continue onto the next node.
 	// If 0xFFFFFFFF, the execution will jump past the end and stop.
 	next = 0x00000000;
+	
+	// Refers to the current task index that is running this node.
+	// This will be set before OnFrame is called.
+	taskIndex = null;
 	
 	/// @function virtual OnLoad()
 	static OnLoad = function()

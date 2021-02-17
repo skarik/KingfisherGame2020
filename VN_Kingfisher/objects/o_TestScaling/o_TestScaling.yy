@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Engine Tests",
+    "path": "folders/Objects/Engine Tests.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_TestScaling",

@@ -1,0 +1,28 @@
+//!/osf/seq/2
+MainTask
+{
+	goto 17794CAA
+	enable true
+	guid 237ACC76
+	__editor_position -436.602570	13.305145	0.000000
+}
+VN_Lines
+{
+	enable true
+	count 1
+	audio0 .
+	line0 Talking all sexy!
+	guid 17794CAA
+	__editor_position -202.905762	-2.003151	4.693787
+}
+VN_Lines
+{
+	enable true
+	count 1
+	audio0 .
+	line0 So sexy.
+	guid 29ADCB20
+	__editor_position 14.452454	-3.393562	14.693787
+}
+goto __END
+#__END

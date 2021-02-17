@@ -18,17 +18,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"o_TestSequence","path":"objects/o_TestSequence/o_TestSequence.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"o_TestSequence","path":"objects/o_TestSequence/o_TestSequence.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"o_TestSequence12","path":"objects/o_TestSequence12/o_TestSequence12.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"o_TestSequence12","path":"objects/o_TestSequence12/o_TestSequence12.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Engine Tests",
-    "path": "folders/Objects/Engine Tests.yy",
+    "name": "Novel",
+    "path": "folders/Objects/Novel.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_TestSequence",
+  "name": "o_TestSequence12",
   "tags": [],
   "resourceType": "GMObject",
 }

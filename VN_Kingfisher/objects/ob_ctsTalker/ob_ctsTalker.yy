@@ -4,7 +4,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "ob_userInterfaceElement",
+    "path": "objects/ob_userInterfaceElement/ob_userInterfaceElement.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -18,17 +21,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"o_TestSequence","path":"objects/o_TestSequence/o_TestSequence.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"o_TestSequence","path":"objects/o_TestSequence/o_TestSequence.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"ob_ctsTalker","path":"objects/ob_ctsTalker/ob_ctsTalker.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Engine Tests",
-    "path": "folders/Objects/Engine Tests.yy",
+    "name": "Talker Logic",
+    "path": "folders/Objects/Novel/Talker Logic.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_TestSequence",
+  "name": "ob_ctsTalker",
   "tags": [],
   "resourceType": "GMObject",
 }
