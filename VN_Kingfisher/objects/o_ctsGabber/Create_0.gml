@@ -4,3 +4,5 @@ event_inherited();
 depth = kDepthUiGabber;
 
 input = new AGabberInput();
+display = new AGabberDisplay();
+state = new AGabberState();

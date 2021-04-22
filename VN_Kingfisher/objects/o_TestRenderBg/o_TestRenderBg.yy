@@ -18,8 +18,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"o_TestRenderChara","path":"objects/o_TestRenderChara/o_TestRenderChara.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"o_TestRenderChara","path":"objects/o_TestRenderChara/o_TestRenderChara.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"o_TestRenderBg","path":"objects/o_TestRenderBg/o_TestRenderBg.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"o_TestRenderBg","path":"objects/o_TestRenderBg/o_TestRenderBg.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -28,7 +28,7 @@
     "path": "folders/Objects/Novel.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_TestRenderChara",
+  "name": "o_TestRenderBg",
   "tags": [],
   "resourceType": "GMObject",
 }

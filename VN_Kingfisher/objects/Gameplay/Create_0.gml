@@ -10,5 +10,6 @@ if (is_struct(global.InitialGameplayState))
 	state = global.InitialGameplayState;
 }
 
+inew(o_TestRenderBg);
 inew(o_TestRenderChara);
 inew(o_TestSequence12);
