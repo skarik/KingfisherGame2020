@@ -6,6 +6,8 @@ function AGameplayState() constructor
 function GameInit()
 {
 	EngineInit();
+	// Add game-specific node types to the sequence system
+	SequenceBackendGameInit();
 	
 	global.InitialGameplayState = null;
 }

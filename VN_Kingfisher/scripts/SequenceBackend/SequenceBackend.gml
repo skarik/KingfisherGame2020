@@ -4,7 +4,6 @@ function SequenceBackendInit()
 		["maintask", ATaskNodeStart],
 		["sidetask", ITaskNode],
 		["generic", ANodeGeneric],
-		["vn_lines", ANodeLines],
 	];
 }
 

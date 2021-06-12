@@ -3,6 +3,9 @@ function SequenceLoad(localFile)
 	// Initialize local state
 	SequenceInitializeLocal();
 	
+	// Begin watchdogging
+	var seq_watchdog = fioWatchFile(localFile, 1.0);
+	
 	// Find the seqeuence
 	var seq_str = fioReadToString(localFile);
 	if (!is_string(seq_str))
@@ -255,6 +258,8 @@ function SequenceLoad(localFile)
 	
 	// Mark that we're loaded properly
 	sqm_loaded = true;
+	// Save the watchdog
+	sqm_watchdog = seq_watchdog;
 }
 function Sequence_InternalLoadInObject(nodeStruct, current_pos, seq_str)
 {
@@ -440,6 +445,9 @@ function SequenceInitializeLocal()
 	// Array of all nodes.
 	// Nodes are instances of INode derived structs.
 	sqm_data_nodes = [];
+	
+	// Watchdog information
+	sqm_watchdog = undefined;
 }
 
 /// @function SequenceUpdate()
@@ -450,6 +458,12 @@ function SequenceUpdate()
 	if (!sqm_loaded)
 	{	// Not working.
 		return false;
+	}
+	
+	if (fioWatchHasChange(sqm_watchdog))
+	{
+		sqm_loaded = false;
+		show_error("File has changed.", true);
 	}
 	
 	// Steps all the current tasks

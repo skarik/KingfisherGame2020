@@ -1,4 +1,4 @@
-function ANodeLines() : INode() constructor
+function ANodeLinesUpdate() : INode() constructor
 {
 	// Loaded from outside
 	count = 0;
@@ -11,19 +11,6 @@ function ANodeLines() : INode() constructor
 	m_state = 0;
 	m_currentLine = 0;
 	m_gabber = null;
-	
-	static OnLoad = function()
-	{
-		if (is_string(style))
-		{
-			style = EnumFromGabberStyle(style);
-		}
-		
-		if (is_string(character))
-		{
-			character = EnumFromCharacter(character);
-		}
-	};
 	
 	static OnFrame = function()
 	{
@@ -107,47 +94,4 @@ function ANodeLines() : INode() constructor
 		
 		// Display text properly parsed.
 	}
-}
-
-function AGabberInput() constructor
-{
-	actor = null;
-	name = "";
-	text = "";
-	
-	priority = true;
-	disable = false;
-	audio = null;
-	autoclose = false;
-	minimal = false;
-	
-	style = kGabberStyleNormal;
-	character = kCharacterNobody;
-	
-	taskId = null;	// Id of the task. If it's the main task ID, it should be null or 0.
-					// Otherwise, it should not take input.
-}
-
-enum EGabberShake
-{
-	None = 0,
-	PerLetter = 1,
-}
-
-function AGabberDisplay() constructor
-{
-	time = 0.0;
-	delay = 0.0;
-	
-	text = "";	// Text that is actually displayed.
-	flags = array_create(0); // Flags associated with each character.
-	
-	count = 0;	// Number of characters that are currently displayed.
-	
-	shake = EGabberShake.None;
-}
-
-function AGabberState() constructor
-{
-	close = false;
 }

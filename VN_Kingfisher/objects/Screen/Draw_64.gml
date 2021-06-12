@@ -3,6 +3,7 @@ if (surface_exists(application_surface))
 {
 	draw_surface_ext(application_surface, 0, 0, 1.0, 1.0, 0, c_white, 1);
 	
+	draw_set_font(f_sysDebug);
 	draw_set_halign(fa_right);
 	draw_set_valign(fa_bottom);
 	draw_set_color(c_white);

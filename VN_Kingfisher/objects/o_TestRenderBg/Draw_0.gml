@@ -2,7 +2,11 @@
 // You can write your code in this editor
 
 var backgroundSprite = sprBackgroundTest;
-var backgroundScale = (Screen.height / sprite_get_height(backgroundSprite));
+/*var backgroundScale = max(
+	Screen.width / sprite_get_width(backgroundSprite),
+	Screen.height / sprite_get_height(backgroundSprite)
+	);*/
+var backgroundScale = (3840.0 / sprite_get_height(backgroundSprite)) * (Screen.height / 3840.0);
 
 gpu_set_tex_filter(true);
 gpu_set_tex_mip_filter(tf_anisotropic);

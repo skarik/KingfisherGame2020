@@ -37,6 +37,7 @@ function fioLocalFileFindAbsoluteFilepath(localPath)
 			global.fio_projectDir + "/datafiles/" + localPath,
 			working_directory + localPath,
 			temp_directory + localPath,
+			localPath,
 		];
 	}
 	else
