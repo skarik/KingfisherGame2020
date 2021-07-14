@@ -258,8 +258,9 @@ function SequenceLoad(localFile)
 	
 	// Mark that we're loaded properly
 	sqm_loaded = true;
-	// Save the watchdog
+	// Save the watchdog & filename
 	sqm_watchdog = seq_watchdog;
+	sqm_source_filename = localFile;
 }
 function Sequence_InternalLoadInObject(nodeStruct, current_pos, seq_str)
 {
@@ -409,9 +410,9 @@ function ASequenceTaskState(inSequencer) constructor
 			}
 			
 			// Grab the current node's GUID
-			var now_node = sequencer.sqm_data_nodes[currentNodeIndex];
 			if (currentNodeIndex < node_count)
 			{
+				var now_node = sequencer.sqm_data_nodes[currentNodeIndex];
 				currentNodeGuid = now_node.guid; 
 			}
 			else
@@ -432,6 +433,16 @@ function ASequenceTaskState(inSequencer) constructor
 	{
 		return !bRunning;
 	}
+	
+	static Cleanup = function()
+	{
+		var node_count = array_length(sequencer.sqm_data_nodes);
+		if (currentNodeIndex < node_count)
+		{
+			var node = sequencer.sqm_data_nodes[currentNodeIndex];
+			node.OnCleanup();
+		}
+	}
 }
 
 function SequenceInitializeLocal()
@@ -450,6 +461,16 @@ function SequenceInitializeLocal()
 	sqm_watchdog = undefined;
 }
 
+function SequenceCleanup()
+{
+	// Steps all the current tasks
+	for (var taskIndex = 0; taskIndex < array_length(sqm_tasks); ++taskIndex)
+	{
+		var task = sqm_tasks[taskIndex];
+		task.Cleanup();
+	}
+}
+
 /// @function SequenceUpdate()
 /// @desc Runs the sequence system.
 /// @returns Boolean. True when working, false when completely stopped.
@@ -460,10 +481,14 @@ function SequenceUpdate()
 		return false;
 	}
 	
-	if (fioWatchHasChange(sqm_watchdog))
+	// Watch for reload state:
+	if (window_has_focus() && fioWatchHasChange(sqm_watchdog))
 	{
 		sqm_loaded = false;
-		show_error("File has changed.", true);
+		//show_error("File has changed.", true); // TODO: make a popup
+		UIShowPopup("Cutscene reloaded.\nLoaded \"" + sqm_source_filename + "\"");
+		
+		SequenceReload();
 	}
 	
 	// Steps all the current tasks
@@ -484,4 +509,53 @@ function SequenceUpdate()
 		}
 	}
 	return false;
+}
+
+/// @function SequenceReload()
+/// @desc Reloads the current sequence, attempting to stay on the same sequence index.
+function SequenceReload()
+{
+	// Save the current task states.
+	var savedTaskStatus = [];
+	for (var taskIndex = 0; taskIndex < array_length(sqm_tasks); ++taskIndex)
+	{
+		var task = sqm_tasks[taskIndex];
+		savedTaskStatus[taskIndex] = {
+			currentNodeIndex: task.currentNodeIndex,
+			currentNodeGuid: task.currentNodeGuid
+			};
+	}
+	
+	// Clear out node states
+	SequenceCleanup();
+	
+	// Clear out the state
+	SequenceInitializeLocal();
+	
+	// Load in the system again
+	SequenceLoad(sqm_source_filename);
+	
+	// Set up the tasks
+	for (var taskIndex = 0; taskIndex < array_length(savedTaskStatus); ++taskIndex)
+	{
+		var task = new ASequenceTaskState(this);
+		var statusToRestore = savedTaskStatus[taskIndex];
+		
+		// Find a matching node:
+		for (var nodeIndex = 0; nodeIndex < array_length(sqm_data_nodes); ++nodeIndex)
+		{
+			if (sqm_data_nodes[nodeIndex].guid == statusToRestore.currentNodeGuid)
+			{
+				task.currentNodeIndex = nodeIndex;
+				break;
+			}
+		}
+		if (task.currentNodeIndex == 0)
+		{
+			task.currentNodeIndex = statusToRestore.currentNodeIndex;
+		}
+		
+		// Save the current status again.
+		sqm_tasks[array_length(sqm_tasks)] = task;
+	}
 }

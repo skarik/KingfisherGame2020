@@ -18,16 +18,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"o_TestRenderChara","path":"objects/o_TestRenderChara/o_TestRenderChara.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"o_TestRenderChara","path":"objects/o_TestRenderChara/o_TestRenderChara.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Core Backend",
-    "path": "folders/Objects/Core Backend.yy",
+    "name": "Novel",
+    "path": "folders/Objects/Novel.yy",
   },
   "resourceVersion": "1.0",
-  "name": "_GSetup",
+  "name": "o_TestRenderChara",
   "tags": [],
   "resourceType": "GMObject",
 }

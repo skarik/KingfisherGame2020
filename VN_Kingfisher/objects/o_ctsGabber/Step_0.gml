@@ -98,7 +98,7 @@ if (l_canEnd)
 	if (!input.disable && !input.minimal)
 	{
 		// Poll input
-		if (keyboard_check_pressed(vk_anykey))
+		if (window_has_focus() && keyboard_check_pressed(vk_anykey))
 		{
 			if (!state.close)
 			{

@@ -19,15 +19,17 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Core Backend",
-    "path": "folders/Objects/Core Backend.yy",
+    "name": "Engine",
+    "path": "folders/Objects/Engine.yy",
   },
   "resourceVersion": "1.0",
-  "name": "_GSetup",
+  "name": "ui_SystemNotifier",
   "tags": [],
   "resourceType": "GMObject",
 }

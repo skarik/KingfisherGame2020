@@ -38,6 +38,11 @@ function INode() constructor
 		return true; // Continue onto the next node.
 	};
 	
+	/// @function virtual OnCleanup()
+	static OnCleanup = function()
+	{
+		// Nothing.
+	};
 	
 	// System properties. These should never need to be overridden:
 	

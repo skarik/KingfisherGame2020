@@ -61,6 +61,15 @@ function ANodeLines() : INode() constructor
 		return m_state >= 2;
 	};
 	
+	static OnCleanup = function()
+	{
+		if (iexists(m_gabber))
+		{
+			idelete(m_gabber);
+			m_gabber = null;
+		}
+	};
+	
 	static parseDialogue = function()
 	{
 		// Replace unicode characters for sanity

@@ -3,6 +3,7 @@ function SequenceBackendGameInit()
 	array_push(global.sequenceTypes,
 		["vn_lines", ANodeLines],
 		["vn_linesupdate", ANodeLinesUpdate],
+		["vn_portrait", ANodePortrait],
 	);
 }
 
@@ -22,6 +23,7 @@ function EnumFromGabberStyle (str)
 {
 	str = string_lower(str);
 	if (str == "gabber")		return kGabberStyleNormal;
+	if (str == "default")		return kGabberStyleNormal;
 	if (str == "narration")		return kGabberStyleNarration;
 	if (str == "incidental")	return kGabberStyleIncidental;
 	if (str == "portrait")		return kGabberStylePortrait;
@@ -63,4 +65,14 @@ function EnumFromCharacter (str)
 	
 	if (str == "librarian")		return kCharacterLibrarian;
 	show_error("Invalid character type \"" + str + "\"", false);
+}
+
+#macro kExpressionNeutral 0
+
+function EnumFromExpression (str)
+{
+	str = string_lower(str);
+	if (str == "neutral")		return kExpressionNeutral;
+	
+	show_error("Invalid expression type \"" + str + "\"", false);
 }

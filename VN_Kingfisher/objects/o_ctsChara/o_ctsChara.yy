@@ -18,16 +18,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Core Backend",
-    "path": "folders/Objects/Core Backend.yy",
+    "name": "Talker Logic",
+    "path": "folders/Objects/Novel/Talker Logic.yy",
   },
   "resourceVersion": "1.0",
-  "name": "_GSetup",
+  "name": "o_ctsChara",
   "tags": [],
   "resourceType": "GMObject",
 }
