@@ -18,12 +18,13 @@ function fioReadToString(localPath)
 	var buf = fioReadToBuffer(localPath);
 	if (buf != null)
 	{
-		var buf_size = buffer_get_size(buf);
-		var str = "";
-		for (var byteIndex = 0; byteIndex < buf_size; ++byteIndex)
-		{
-			str += chr(buffer_read(buf, buffer_u8));
-		}
+		// Add null terminator
+		buffer_seek(buf, buffer_seek_end, 0);
+		buffer_write(buf, buffer_u8, 0);
+		
+		// Read buffer as a string.
+		buffer_seek(buf, buffer_seek_start, 0);
+		str = buffer_read(buf, buffer_text);
 		buffer_delete(buf);
 		
 		return str;

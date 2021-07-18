@@ -78,12 +78,7 @@ function ANodeLines() : INode() constructor
 		m_gabber.input.text = string_replace_all(m_gabber.input.text, "\u201B", "'");
 		m_gabber.input.text = string_replace_all(m_gabber.input.text, "\u201C", "\"");
 		m_gabber.input.text = string_replace_all(m_gabber.input.text, "\u201D", "\"");
-		
-		m_gabber.input.text = string_replace_all(m_gabber.input.text, "‘", "'");
-		m_gabber.input.text = string_replace_all(m_gabber.input.text, "’", "'");
-		m_gabber.input.text = string_replace_all(m_gabber.input.text, "‛", "'");
-		m_gabber.input.text = string_replace_all(m_gabber.input.text, "“", "\"");
-		m_gabber.input.text = string_replace_all(m_gabber.input.text, "”", "\"");
+		// ACTUALLY : We have to edit this engine-side, since GM cannot load certain glyphs properly with JSON
 		
 		// Initialize text
 		m_gabber.display.text = "";
