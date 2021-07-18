@@ -75,8 +75,15 @@ function ANodeLines() : INode() constructor
 		// Replace unicode characters for sanity
 		m_gabber.input.text = string_replace_all(m_gabber.input.text, "\u2018", "'");
 		m_gabber.input.text = string_replace_all(m_gabber.input.text, "\u2019", "'");
+		m_gabber.input.text = string_replace_all(m_gabber.input.text, "\u201B", "'");
 		m_gabber.input.text = string_replace_all(m_gabber.input.text, "\u201C", "\"");
 		m_gabber.input.text = string_replace_all(m_gabber.input.text, "\u201D", "\"");
+		
+		m_gabber.input.text = string_replace_all(m_gabber.input.text, "‘", "'");
+		m_gabber.input.text = string_replace_all(m_gabber.input.text, "’", "'");
+		m_gabber.input.text = string_replace_all(m_gabber.input.text, "‛", "'");
+		m_gabber.input.text = string_replace_all(m_gabber.input.text, "“", "\"");
+		m_gabber.input.text = string_replace_all(m_gabber.input.text, "”", "\"");
 		
 		// Initialize text
 		m_gabber.display.text = "";
