@@ -64,6 +64,7 @@ function EnumFromCharacter (str)
 	if (str == "okinobu")		return kCharacterOkinobu;
 	
 	if (str == "librarian")		return kCharacterLibrarian;
+	if (str == "libby")			return kCharacterLibrarian;
 	show_error("Invalid character type \"" + str + "\"", false);
 }
 

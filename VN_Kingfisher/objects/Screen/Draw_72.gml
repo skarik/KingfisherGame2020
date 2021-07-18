@@ -4,8 +4,11 @@ var real_width = window_get_width();
 var real_height = window_get_height();
 var real_fullscreen = window_get_fullscreen();
 
-if (width != real_width || height != real_height
-	|| fullscreen != real_fullscreen)
+var bValidSize = real_width > 0 && real_height > 0;
+
+if (bValidSize
+	&& (width != real_width || height != real_height
+		|| fullscreen != real_fullscreen))
 {
 	width = real_width;
 	height = real_height;
@@ -13,7 +16,7 @@ if (width != real_width || height != real_height
 	bResizeRequested = true;
 }
 
-if (bResizeRequested)
+if (bResizeRequested && bValidSize)
 {
 	bResizeRequested = true;
 	

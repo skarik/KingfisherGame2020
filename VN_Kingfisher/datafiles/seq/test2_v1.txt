@@ -17,7 +17,7 @@ VN_Lines
 	end default
 	line0 Talking all sexy!
 	guid 17794CAA
-	__editor_position -224.000000	-274.000000	4.693787
+	__editor_position -224.000000	-404.000000	4.693787
 }
 VN_Portrait
 {
@@ -28,7 +28,7 @@ VN_Portrait
 	expression neutral
 	wait_for_finish true
 	guid A4CB9D35
-	__editor_position -32.000000	-261.000000	18.000000
+	__editor_position -32.000000	-431.000000	18.000000
 }
 VN_Lines
 {
@@ -40,7 +40,7 @@ VN_Lines
 	end default
 	line0 So sexy.
 	guid 29ADCB20
-	__editor_position 160.000000	-274.000000	14.693787
+	__editor_position 160.000000	-404.000000	14.693787
 }
 goto __END
 #__END
