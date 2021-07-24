@@ -1,9 +1,11 @@
 function SequenceBackendGameInit()
 {
 	array_push(global.sequenceTypes,
+		["vn_wait", ANodeWait],
 		["vn_lines", ANodeLines],
 		["vn_linesupdate", ANodeLinesUpdate],
 		["vn_portrait", ANodePortrait],
+		["vn_background", ANodeBackground],
 	);
 }
 
