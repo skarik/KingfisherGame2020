@@ -1,6 +1,6 @@
 function AGameplayState() constructor
 {
-	startingScript = "seq/test2_v1.txt";
+	startingScript = "seq/demo_v1.txt";
 }
 
 function GameInit()

@@ -15,7 +15,7 @@ VN_Lines
 	character nobody
 	style default
 	end default
-	line0 Talking all sexy!
+	line0 Oh! What are you doing here? It seems you’ve found yourself in my library. You aren’t the first to arrive here and you won’t be 
 	guid 17794CAA
 	__editor_position -224.000000	-404.000000	4.693787
 }

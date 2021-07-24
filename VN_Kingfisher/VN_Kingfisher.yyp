@@ -127,6 +127,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/seq","resourceVersion":"1.0","name":"test_v1.txt","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/seq","resourceVersion":"1.0","name":"test_v2.txt","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/seq","resourceVersion":"1.0","name":"test2_v1.txt","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/seq","resourceVersion":"1.0","name":"demo_v1.txt","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2.3.3.570",

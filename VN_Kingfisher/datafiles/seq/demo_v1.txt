@@ -1,0 +1,43 @@
+//!/osf/seq/2
+MainTask
+{
+	goto 171863C7
+	enable true
+	goto 171863C7
+	guid 07F7CDE8
+	__editor_position -448.000000	48.000000	4.000000
+}
+VN_Lines
+{
+	enable true
+	count 1
+	audio0 .
+	character nobody
+	style narration
+	end default
+	line0 Oh! What are you doing here? It seems you’ve found yourself in my library. You aren’t the first to arrive here and you won’t be 
+	guid 171863C7
+	__editor_position -192.000000	-188.000000	18.726563
+}
+VN_LinesUpdate
+{
+	enable true
+	count 1
+	audio0 .
+	character nobody
+	line0 Your story should be safely catalogued away. Maybe Ronin was taking a peek.
+	guid AF948020
+	__editor_position 32.000000	-7.000000	42.726563
+}
+VN_LinesUpdate
+{
+	enable true
+	count 1
+	audio0 .
+	character nobody
+	line0 No matter. We’ll simply get you back where you belong. Come along now. I know just where to put you.
+	guid 17DF9FFD
+	__editor_position 128.000000	-92.000000	52.726563
+}
+goto __END
+#__END
